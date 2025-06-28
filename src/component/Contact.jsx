@@ -1,7 +1,33 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { FaLinkedin, FaInstagram, FaEnvelope, FaGithub } from "react-icons/fa";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
+  const form = useRef();
+  const [status, setStatus] = useState(null);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_07nvvi5", // replace with your EmailJS service ID
+        "template_acjwo54", // replace with your EmailJS template ID
+        form.current,
+        "Q8E7uekNErlrVUoUC" // replace with your EmailJS public key
+      )
+      .then(
+        (result) => {
+          setStatus("Message sent successfully!");
+          e.target.reset();
+        },
+        (error) => {
+          setStatus("Failed to send message. Please try again.");
+          console.error(error.text);
+        }
+      );
+  };
+
   return (
     <section
       id="contact"
@@ -17,53 +43,34 @@ export default function Contact() {
 
       {/* Contact Icons */}
       <div className="flex justify-center flex-wrap gap-6 mb-8">
-        <a
-          href="https://www.linkedin.com/in/saumy-mishra"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-white hover:text-cyan-400 transition"
-        >
-          <FaLinkedin size={26} />
-        </a>
-        <a
-          href="https://github.com/Saumymishra"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-white hover:text-white transition"
-        >
-          <FaGithub size={26} />
-        </a>
-        <a
-          href="https://www.instagram.com/_saumy._/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-white hover:text-pink-400 transition"
-        >
-          <FaInstagram size={26} />
-        </a>
-        <a
-          href="mailto:saumymishra08@gmail.com"
-          className="text-white hover:text-green-400 transition"
-        >
-          <FaEnvelope size={26} />
-        </a>
+        {/* ... your icons ... */}
       </div>
 
       {/* Contact Form */}
-      <form className="flex flex-col gap-4 max-w-md mx-auto w-full mb-8">
+      <form
+        ref={form}
+        onSubmit={sendEmail}
+        className="flex flex-col gap-4 max-w-md mx-auto w-full mb-8"
+      >
         <input
           type="text"
+          name="user_name"
           placeholder="Your Name"
+          required
           className="p-3 rounded-lg bg-white/10 backdrop-blur-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400"
         />
         <input
           type="email"
+          name="user_email"
           placeholder="Your Email"
+          required
           className="p-3 rounded-lg bg-white/10 backdrop-blur-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400"
         />
         <textarea
+          name="message"
           placeholder="Your Message"
           rows="4"
+          required
           className="p-3 rounded-lg bg-white/10 backdrop-blur-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400"
         />
         <button
@@ -74,9 +81,13 @@ export default function Contact() {
         </button>
       </form>
 
+      {status && (
+        <p className="text-center text-white mb-6">{status}</p>
+      )}
+
       {/* Download CV */}
       <a
-        href="/saumy.pdf" // Adjust path as needed
+        href="/saumy.pdf"
         download
         className="bg-gradient-to-r from-green-500 to-blue-500 text-white font-semibold rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition-transform duration-300 py-3 px-6 inline-block"
       >

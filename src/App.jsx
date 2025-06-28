@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Hero from "./component/Hero";
 import About from "./component/About";
+import Experience from "./component/Experience"; // already imported
 import Projects from "./component/Projects";
 import SkillsSection from "./component/SkillsSection";
 import Contact from "./component/Contact";
@@ -12,6 +13,7 @@ export default function App() {
   const items = [
     { label: "Home", href: "#hero" },
     { label: "About", href: "#about" },
+    { label: "Experience", href: "#experience" }, // <-- Add this for nav linking
     { label: "Projects", href: "#projects" },
     { label: "My Skills", href: "#skillssection" },
     { label: "Contact", href: "#contact" },
@@ -39,7 +41,7 @@ export default function App() {
       />
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto">
+      <div className="relative z-10 mx-auto">
         <div style={{ position: "relative" }}>
           <GooeyNav
             items={items}
@@ -52,13 +54,16 @@ export default function App() {
             colors={[1, 2, 3, 1, 2, 3, 1, 4]}
           />
         </div>
+
         <main>
           <Hero />
           <About />
+          <Experience /> {/* Inserted here */}
           <Projects />
           <SkillsSection />
           <Contact />
         </main>
+
         <Footer />
       </div>
     </div>

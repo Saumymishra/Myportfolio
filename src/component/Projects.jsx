@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Projects({ githubUsername = "Saumymishra" }) {
   const [repos, setRepos] = useState([]);
@@ -42,15 +43,25 @@ export default function Projects({ githubUsername = "Saumymishra" }) {
       id="projects"
       className="scroll-mt-24 py-16 sm:py-20 px-4 sm:px-6 md:px-10 max-w-7xl mx-auto"
     >
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10 bg-gradient-to-r from-cyan-400 to-purple-600 text-transparent bg-clip-text">
+      <motion.h2
+        className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10 bg-gradient-to-r from-cyan-400 to-purple-600 text-transparent bg-clip-text"
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ amount: 0.4 }}
+      >
         Projects
-      </h2>
+      </motion.h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-        {repos.map((repo) => (
-          <div
+        {repos.map((repo, index) => (
+          <motion.div
             key={repo.id}
             className="bg-white/10 backdrop-blur-md rounded-2xl p-5 sm:p-6 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            viewport={{ amount: 0.4 }}
           >
             <h3 className="text-lg sm:text-xl font-semibold mb-2">
               {repo.name}
@@ -65,7 +76,7 @@ export default function Projects({ githubUsername = "Saumymishra" }) {
             >
               View Project
             </button>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
