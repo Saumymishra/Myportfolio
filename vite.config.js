@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react';
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/Portfolio/',   // Important for GitHub Pages path!
+  base: '/Myportfolio/',   // Important for GitHub Pages path!
   plugins: [react()],
 });
