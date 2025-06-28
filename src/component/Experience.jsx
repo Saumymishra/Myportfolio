@@ -43,25 +43,25 @@ const Experience = () => {
         {experiences.map((exp, index) => (
           <motion.div
             key={index}
-            className="relative"
+            className="relative bg-white/10 backdrop-blur-md rounded-xl p-6 shadow-lg"
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
           >
             {/* Dot + Icon */}
-            <div className="absolute -left-[39px] top-1 bg-purple-600 text-white p-1.5 rounded-full shadow-md">
+            <div className="absolute -left-[39px] top-6 bg-purple-600 text-white p-1.5 rounded-full shadow-md">
               <Briefcase size={16} />
             </div>
 
-            <h3 className="text-xl font-semibold">
+            <h3 className="text-xl font-semibold text-white">
               {exp.role} @{" "}
               <span className="text-purple-400">{exp.company}</span>
             </h3>
-            <p className="text-sm text-gray-400">{exp.duration}</p>
+            <p className="text-sm text-gray-300">{exp.duration}</p>
             <p className="text-sm italic text-gray-300 mt-1 mb-2">
               Tech: {exp.tech}
             </p>
-            <ul className="list-disc list-inside text-gray-300 space-y-1">
+            <ul className="list-disc list-inside text-gray-200 space-y-1">
               {exp.details.map((point, i) => (
                 <li key={i}>{point}</li>
               ))}
