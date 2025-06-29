@@ -87,7 +87,7 @@ export default function Contact() {
 
       {/* Download CV */}
       <a
-        href="/Portfolio/saumy.pdf"
+        href="/Myportfolio/saumy.pdf"
         download
         className="bg-gradient-to-r from-green-500 to-blue-500 text-white font-semibold rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition-transform duration-300 py-3 px-6 inline-block"
       >

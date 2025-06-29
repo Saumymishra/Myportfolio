@@ -60,7 +60,7 @@ export default function Hero() {
 
         {/* Download CV Button */}
         <a
-          href="/Portfolio/saumy.pdf"
+          href="/Myportfolio/saumy.pdf"
           download
           className="inline-block px-5 sm:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition-transform duration-300 text-sm sm:text-base"
         >
