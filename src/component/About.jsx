@@ -33,32 +33,34 @@ export default function About() {
       {/* Paragraphs */}
       <div className="space-y-4">
         <motion.p
-          className="text-white text-sm sm:text-base md:text-lg leading-relaxed px-2 sm:px-6"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          viewport={{ amount: 0.5 }}
-        >
-          I’m a creative frontend developer with a passion for crafting sleek,
-          interactive websites that balance aesthetics and functionality. My
-          journey in web development is fueled by curiosity and a relentless drive
-          to solve problems through code—transforming ideas into fast, engaging,
-          and user-centric experiences.
-        </motion.p>
+  className="text-white text-sm sm:text-base md:text-lg leading-relaxed px-2 sm:px-6"
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, delay: 0.1 }}
+  viewport={{ amount: 0.5 }}
+>
+  I’m a Full Stack Developer (MERN) building production-ready web applications
+  used by real users and clients. I currently work on live products involving
+  secure admin dashboards, backend APIs, and end-to-end system integration—
+  taking features from idea to deployment with a strong focus on reliability
+  and performance.
+</motion.p>
 
-        <motion.p
-          className="text-white text-sm sm:text-base md:text-lg leading-relaxed px-2 sm:px-6"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ amount: 0.5 }}
-        >
-          With expertise in React, JavaScript, and Tailwind CSS, I focus on
-          building modern, performant interfaces that delight users and meet
-          business goals. Whether it’s a pixel-perfect UI, smooth animations, or a
-          complex web app, I thrive on pushing the boundaries of what’s possible
-          on the web.
-        </motion.p>
+<motion.p
+  className="text-white text-sm sm:text-base md:text-lg leading-relaxed px-2 sm:px-6"
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, delay: 0.3 }}
+  viewport={{ amount: 0.5 }}
+>
+  With hands-on experience in React, Node.js, Express, MongoDB, and Tailwind CSS,
+  I specialize in building scalable full-stack systems with secure
+  authentication, role-based access, and clean UI experiences. Whether it’s
+  optimizing backend logic, designing admin workflows, or crafting responsive
+  interfaces, I focus on shipping clean, maintainable solutions that solve real
+  business problems.
+</motion.p>
+
       </div>
     </section>
   );
