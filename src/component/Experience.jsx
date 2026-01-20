@@ -4,25 +4,36 @@ import { Briefcase } from "lucide-react";
 
 const experiences = [
   {
-    role: "Web Developer Intern",
-    company: "Reignite Technologies",
-    duration: "Feb 2025 – Mar 2025",
-    tech: "HTML, CSS, JavaScript, React, Tailwind",
+    role: "Full Stack Developer (MERN)",
+    company: "Saoirse IT Solutions LLP",
+    duration: "Oct 2025 – Present",
+    tech: "HTML, CSS, JavScript, React, Tailwind, Node.js, Express, MongoDB, JWT",
     details: [
-      "Assisted in developing and debugging full-stack web applications using HTML, CSS, JavaScript, and React.js",
-      "Implemented new features and optimized existing codebase in collaboration with senior developers",
-      "Participated in daily stand-ups and code reviews as part of an Agile development team",
+      "Developing and maintaining secure backend APIs and admin panel logic using Node.js, Express, and MongoDB.",
+      "Building role-based admin dashboards with protected routes and authentication flows.",
+      "Integrating frontend and backend workflows with end-to-end testing to improve stability and reduce bugs.",
     ],
   },
   {
-    role: "Freelance Web Developer",
-    company: "Self-employed",
-    duration: "Present",
-    tech: "HTML, CSS, JavaScript, React, Tailwind, Bootstrap, MongoDB,",
+    role: "Full Stack Developer (MERN)",
+    company: "Reignite Technologies",
+    duration: "Feb 2025 – Mar 2025",
+    tech: "React, Tailwind, Node.js, Express, MongoDB",
     details: [
-      "Designed and developed a ticket trading platform enabling users to swap event tickets securely.",
-      "Implemented user authentication, ticket listing, and event/date filtering features.",
-      "Focused on user-friendly interface and secure data handling practices.",
+      "Delivered scalable MERN stack features in agile sprints, improving development speed and code quality.",
+      "Optimized MongoDB schemas and API logic to improve backend performance.",
+      "Collaborated with team members using Git-based workflows and participated in code reviews.",
+    ],
+  },
+  {
+    role: "Freelance Full Stack Developer",
+    company: "Self-Employed",
+    duration: "Mar 2025 – Oct 2025",
+    tech: "React, Tailwind, Node.js, Express, MongoDB",
+    details: [
+      "Designed and developed a ticket trading platform enabling users to securely list and swap event tickets.",
+      "Implemented user authentication, ticket management, and filtering features.",
+      "Focused on clean UI, secure data handling, and scalable full-stack architecture.",
     ],
   },
 ];
